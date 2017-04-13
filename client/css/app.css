@@ -1,0 +1,12 @@
+.hello {
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  background-color: #FFCCCB;
+  color: #7F1917;
+  padding: 40px;
+  font-family: "Helvetica Neue", Sans-Serif; }
+
+/*# sourceMappingURL=app.css.map */
