@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+.row:before, .row:after {
+  content: '';
+  display: table; }
+.row:after {
+  clear: both; }
+
+/* Talk about this "magic" in Wednesday's lecture. */
+@media all and (max-width: 40em) {
+  .small-1 {
+    float: left;
+    box-sizing: border-box;
+    width: 8.3333%; }
+
+  .small-2 {
+    float: left;
+    box-sizing: border-box;
+    width: 16.6666%; }
+
+  .small-3 {
+    float: left;
+    box-sizing: border-box;
+    width: 24.9999%; }
+
+  .small-4 {
+    float: left;
+    box-sizing: border-box;
+    width: 33.3332%; }
+
+  .small-5 {
+    float: left;
+    box-sizing: border-box;
+    width: 41.6665%; }
+
+  .small-6 {
+    float: left;
+    box-sizing: border-box;
+    width: 49.9998%; }
+
+  .small-7 {
+    float: left;
+    box-sizing: border-box;
+    width: 58.3331%; }
+
+  .small-8 {
+    float: left;
+    box-sizing: border-box;
+    width: 66.6664%; }
+
+  .small-9 {
+    float: left;
+    box-sizing: border-box;
+    width: 74.9997%; }
+
+  .small-10 {
+    float: left;
+    box-sizing: border-box;
+    width: 83.333%; }
+
+  .small-11 {
+    float: left;
+    box-sizing: border-box;
+    width: 91.6663%; }
+
+  .small-12 {
+    float: left;
+    box-sizing: border-box;
+    width: 99.9996%; } }
+@media all and (min-width: 40.01em) and (max-width: 64em) {
+  .medium-1 {
+    float: left;
+    box-sizing: border-box;
+    width: 8.3333%; }
+
+  .medium-2 {
+    float: left;
+    box-sizing: border-box;
+    width: 16.6666%; }
+
+  .medium-3 {
+    float: left;
+    box-sizing: border-box;
+    width: 24.9999%; }
+
+  .medium-4 {
+    float: left;
+    box-sizing: border-box;
+    width: 33.3332%; }
+
+  .medium-5 {
+    float: left;
+    box-sizing: border-box;
+    width: 41.6665%; }
+
+  .medium-6 {
+    float: left;
+    box-sizing: border-box;
+    width: 49.9998%; }
+
+  .medium-7 {
+    float: left;
+    box-sizing: border-box;
+    width: 58.3331%; }
+
+  .medium-8 {
+    float: left;
+    box-sizing: border-box;
+    width: 66.6664%; }
+
+  .medium-9 {
+    float: left;
+    box-sizing: border-box;
+    width: 74.9997%; }
+
+  .medium-10 {
+    float: left;
+    box-sizing: border-box;
+    width: 83.333%; }
+
+  .medium-11 {
+    float: left;
+    box-sizing: border-box;
+    width: 91.6663%; }
+
+  .medium-12 {
+    float: left;
+    box-sizing: border-box;
+    width: 99.9996%; } }
+@media all and (min-width: 64.01em) {
+  .large-1 {
+    float: left;
+    box-sizing: border-box;
+    width: 8.3333%; }
+
+  .large-2 {
+    float: left;
+    box-sizing: border-box;
+    width: 16.6666%; }
+
+  .large-3 {
+    float: left;
+    box-sizing: border-box;
+    width: 24.9999%; }
+
+  .large-4 {
+    float: left;
+    box-sizing: border-box;
+    width: 33.3332%; }
+
+  .large-5 {
+    float: left;
+    box-sizing: border-box;
+    width: 41.6665%; }
+
+  .large-6 {
+    float: left;
+    box-sizing: border-box;
+    width: 49.9998%; }
+
+  .large-7 {
+    float: left;
+    box-sizing: border-box;
+    width: 58.3331%; }
+
+  .large-8 {
+    float: left;
+    box-sizing: border-box;
+    width: 66.6664%; }
+
+  .large-9 {
+    float: left;
+    box-sizing: border-box;
+    width: 74.9997%; }
+
+  .large-10 {
+    float: left;
+    box-sizing: border-box;
+    width: 83.333%; }
+
+  .large-11 {
+    float: left;
+    box-sizing: border-box;
+    width: 91.6663%; }
+
+  .large-12 {
+    float: left;
+    box-sizing: border-box;
+    width: 99.9996%; } }
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  font-family: 'Inconsolata', monospace; }
+
+#container {
+  width: 100%;
+  position: relative; }
+  #container ul {
+    background-color: #2DA9FF;
+    list-style-type: none; }
+    #container ul li {
+      background-color: #2DA9FF;
+      border: 1px solid #fff; }
+      #container ul li a {
+        display: block;
+        padding: 15px;
+        color: #fff;
+        text-decoration: none; }
+      #container ul li:hover {
+        background-color: #0A75BE; }
+    @media all and (max-width: 40em) {
+      #container ul {
+        list-style-type: none; }
+        #container ul li a {
+          display: block; } }
+    @media all and (min-width: 40.01em) and (max-width: 64em) {
+      #container ul {
+        width: 100%; } }
+  #container .dropdown-content {
+    background-color: #2DA9FF;
+    width: 100%;
+    display: block;
+    top: 50px; }
+    #container .dropdown-content li {
+      background-color: #2DA9FF;
+      border: 0px; }
+      #container .dropdown-content li a {
+        text-decoration: none;
+        color: #fff; }
+    @media all and (max-width: 40em) {
+      #container .dropdown-content li {
+        padding: 10px 40px;
+        display: block; } }
+    @media all and (min-width: 40.01em) and (max-width: 64em) {
+      #container .dropdown-content {
+        position: fixed;
+        padding: 0px;
+        left: 0px; }
+        #container .dropdown-content li {
+          float: left; } }
+
+.trigger {
+  background-color: #2DA9FF;
+  padding: 10px;
+  padding-bottom: 15px; }
+  .trigger img {
+    float: right; }
+  .trigger a {
+    color: #fff;
+    text-decoration: none; }
+
+/*# sourceMappingURL=styles.css.map */

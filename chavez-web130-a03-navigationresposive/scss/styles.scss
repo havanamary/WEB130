@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+// These are the variables being used for the site.
+$lightblue: #2DA9FF;
+$darkblue: #0A75BE;
+// This is the grib style being used for the site.
+$smallMax: 40.0em;
+$mediumMin: 40.01em;
+$mediumMax: 64.0em;
+$largeMin: 64.01em;
+
+// Hack to force browser to render content *after* a floated element.
+// Called a "clearfix" hack.
+.row {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin columnQuery($size) {
+    @if $size == large {
+        @media all and (min-width: $largeMin) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media all and (min-width: $mediumMin) and (max-width: $mediumMax) {
+            @content;
+        }
+    }
+    @else if $size == small {
+        @media all and (max-width: $smallMax) {
+            @content;
+        }
+    }
+}
+
+$sizes: small, medium, large;
+
+/* Talk about this "magic" in Wednesday's lecture. */
+@each $size in $sizes {
+    @include columnQuery($size) {
+        @for $col from 1 through 12 {
+            .#{$size}-#{$col} {  // .samll-1 { | .medium-1  { | .large-1 {
+                float:left;
+                box-sizing: border-box;
+                width: ($col * 8.3333%); // 1 * 25% | 1* 25% | 1 * 25%
+            }
+        }
+    }
+}
+
+//scss rules
+*{
+    margin: 0;
+    padding: 0;
+
+    }
+header {
+    font-family:
+    'Inconsolata', monospace;
+}
+#container {
+    width:100%;
+    position: relative;
+  ul {
+      background-color: $lightblue;
+      list-style-type: none;
+      li{
+          background-color: $lightblue;
+          border: 1px solid #fff;
+          a{
+              display: block;
+              padding: 15px;
+              color: #fff;
+              text-decoration: none;
+          }
+          &:hover {
+                background-color:$darkblue;
+
+          }
+      }
+@include columnQuery (small){
+    list-style-type: none;
+      li {
+          a {
+            display: block;
+            }
+      }
+    }
+    @include columnQuery(medium){
+        &{width: 100%;}
+    }
+}
+
+.dropdown-content {
+    background-color: $lightblue;
+    width: 100%;
+    display: block;
+    top: 50px;
+        li {
+            background-color: $lightblue;
+            border: 0px;
+            a{
+                text-decoration: none;
+    color: #fff;
+            }
+        }
+    @include columnQuery (small){
+        li {
+            padding: 10px 40px;
+            display: block;
+        }
+    }
+    @include columnQuery(medium){
+            position: fixed;
+            padding: 0px;
+            left: 0px;
+            li{
+                float: left;
+            }
+    }
+}
+}
+
+.trigger {
+    background-color: $lightblue;
+    padding: 10px;
+    padding-bottom: 15px;
+    img{
+        float: right;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+}
